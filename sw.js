@@ -1,5 +1,5 @@
 // Hamid APP service worker: works offline after the first visit.
-const V = 'hamid-app-v1';
+const V = 'hamid-app-v2';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
